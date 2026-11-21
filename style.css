@@ -1,0 +1,345 @@
+/* Remove default spacing */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+     scroll-behavior: smooth; /*smooth scroll when clicking navlinks */
+}
+
+/* Navigation bar */
+.navbar{
+    background-color: rgb(24, 10, 10);
+    padding: 15px 30px;
+
+    /* put logo and links on the same line */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+/*Navigation Links */
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-weight: bold;
+}
+/* links */
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+/* change link color when mouse is hovered on it */
+.nav-links a:hover{
+    color: gold;
+}
+
+/* =========Body============== */
+body{
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* visible outline for keyboard users */
+a:focus-visible{
+    outline: 3px solid #00bcd4;
+    outline-offset: 3px;
+}
+/* ===========buttons=========== */
+.btn{
+    display: inline-block;
+    padding: 12px 26px;
+    border: 2px solid #00bcd4;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    /*========fill buttons=============  */
+ .btn-primary{
+    background-color: #00bcd4;
+    color: #222;
+ }   
+
+.btn-primary:hover{
+    color: white;
+}
+.btn-outline:hover{
+    color:black;
+}
+/* =====hero===== */
+.hero{
+    padding: 90px 0px;
+}
+/* two columns to the left and card to the right */
+.hero-container{
+display: grid;
+grid-template-columns: 1.1fr,1fr;
+gap: 60px;
+align-items: center;
+}
+.hero-text h1{
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-text p{
+    font-size: 18px;
+    color: #555;
+    max-width: 480px;
+}
+.hero-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* ===code cart======= */
+
+.code-card{
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    border-bottom: 4px solid #00bcd4;
+}
+/* file name bar */
+.code-card-top{
+    padding: 12px 20px;
+    border-bottom: 1px solid #444;
+    color: #aaa;
+    font-size: 14px;
+}
+.code-card pre{
+    padding: 25px 20px;
+    overflow-x: auto;
+    color: white;
+    line-height: 1.8;
+}
+.code-card code{
+    font-family: 'Courier New', monospace;
+}
+/* code colours */
+.c-key{color: #00bcd4;}
+.c-str{color: #ccc;}
+
+/* sections(shared styles) */
+.section{
+    padding: 80px 0;
+}
+/* light grey background to seperate the sections */
+.section-light{
+    background-color: #f5f5f5;
+}
+.section h2{
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+.hero-container{
+    display: flex;
+}
+
+/* ===============About================ */
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 40px;
+}
+.about-text p{
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 15px;
+    max-width: 600px;
+}
+/* ======================skills section*/
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.skill-group{
+    font-size: 18px;
+    margin-top: 15px;
+}
+/* ======small pills used======= */
+.tags{
+    list-style: none;
+    display: flex;
+    flex-direction: wrap;
+    gap: 10px;
+}
+.tags li{
+    background-color: #222;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* =======================projects section========= */
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.project-card{
+    background-color: white;
+    padding: 30px;
+    border-top:4px solid #222;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: border-color 0.2s;
+}
+.project-card p{
+    color: #555;
+}
+/* pushes the links to the bottom of every card */
+.project-links{
+    margin-top: auto;
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.project-links a{
+    color: #222;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #00bcd4;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+.project-links a:hover{
+    color: #00838f;
+}
+
+/* ==========contact section========== */
+#contact{
+    text-align: center;
+}
+#contact p{
+    color: #555;
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+
+}
+/* ===============Footer========== */
+.footer{
+    background-color: #222;
+    color: white;
+    margin-top: 50px;
+}
+/* =========footer columns========= */
+.footer-container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 50px;
+}
+
+/* footer logo */
+.footer-logo{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* footer paragraphs */
+.footer-column p{
+    color: #ccc;
+    line-height: 1.6;
+}
+/* footer titles */
+.footer-column h3{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* foter list */
+.footer-column ul{
+    list-style: none;
+}
+/* footer links */
+.footer-column li{
+ margin-top: 10px;
+}
+
+.footer-column a{
+    color: #ccc;
+    text-decoration: none;
+}
+.footer-column a:hover{
+    color: #00bcd4;
+}
+
+/* social media */
+.social-links{
+    width: 25px;
+    margin-right: 5px;
+} 
+
+/* copyright */
+.copyright{
+    border-top: 1px solid #444;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.copyright p{
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* =====Media Queries Responsive Design=== */
+/* ===================Responsive Design=============== */
+/* for screeens smaller then 600px */
+@media(max-width: 600px){
+    .navbar{
+    /* put logo above the links */
+    flex-direction: column;
+    gap: 15px;
+    }
+    .nav-links{
+        /* stack links to be vertical */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* footer */
+    .footer-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+
+    }
+    /* centralise socail media icans and text */
+    .social-links{
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+
+    }
+    
+}
+
+
